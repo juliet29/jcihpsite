@@ -66,7 +66,7 @@ def design():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    appp.run(debug=True)
 
 
 
