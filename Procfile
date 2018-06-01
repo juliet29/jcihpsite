@@ -1,1 +1,1 @@
-web: gunicorn jcihpapp/application.py:app
+web: gunicorn jcihpapp/application:app
