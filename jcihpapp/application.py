@@ -1,5 +1,5 @@
 #from cs50 import SQL
-from flask import Flask#, flash, redirect, render_template, request, session
+from flask import Flask, flash, redirect, render_template, request, session
 #from flask_session import Session
 #from tempfile import mkdtemp
 #from werkzeug.exceptions import default_exceptions
@@ -13,7 +13,7 @@ from flask import Flask#, flash, redirect, render_template, request, session
 app = Flask(__name__)
 
 # Ensure responses aren't cached
-#if app.config["DEBUG"]:
+#if app.config["3DEBUG"]:
     #@app.after_request
     #def after_request(response):
         #response.headers["Cache-Control"] = "no-cache, no-store, must-revalidate"
