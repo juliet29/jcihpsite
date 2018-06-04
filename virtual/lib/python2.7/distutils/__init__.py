@@ -1,5 +1,4 @@
 import os
-import app
 import sys
 import warnings
 import imp
