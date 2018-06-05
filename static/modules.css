@@ -31,7 +31,6 @@
   height: 50px;
   margin: 0 5px;
   width: 50px;
-
 }
 
 .circle-1 {
@@ -147,7 +146,7 @@ h1 {
   padding-top: 10vh;
   margin-left: -100vw;
   transition: margin-left .5s ease;
-  z-index: 1;
+  z-index: 5;
 }
 
 .ju-menu input:checked~.ju-menu_content {
@@ -207,8 +206,10 @@ h1 {
   .ju-menu input:checked~.ju-menu_content {
     display: block;
     position: absolute;
-    right: 50px;
+    right: -20px;
     transition: display 3s;
+    width: 110vw;
+    height: 110vh;
   }
 }
 
@@ -216,13 +217,14 @@ h1 {
 **************************************/
 
 .ju-footer {
-  background-color: #ffffff;
+  background-color: white;
   font-size: smaller;
   padding: 5px;
   padding-left: 5%;
   padding-top: 15px;
   padding-bottom: 30px;
 }
+
 
 .footer-section {
   display: flex;
@@ -239,6 +241,23 @@ h1 {
   left: 14vw;
   position: relative;
   font-weight: bolder;
+}
+
+/**Small devices (landscape phones, less than 768px)**/
+
+@media (max-width: 767.98px) {
+  .ju-footer {
+    width: 100%;
+  }
+
+  .ju-footer-question {
+    text-align: center;
+  }
+  .footer-info {
+    text-align: center;
+    margin-top: 10px;
+    left: 0;
+  }
 }
 
 /*************HEROS/LEADINS************
@@ -306,14 +325,20 @@ h1 {
   margin-left: -30%;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 425px) {
   .ju-hero_newIdea--top h1 {
     font-size: 9vh;
-    margin-bottom: -2vh;
+    margin: auto;
     letter-spacing: -5px
   }
   .ju-icon {
-    height: 9vh;
+    display: none;
+  }
+  .ju-hero_newIdea {
+    margin-top: 0;
+  }
+  .ju-hero_downbutton {
+    bottom: -4vh !important;
   }
 }
 

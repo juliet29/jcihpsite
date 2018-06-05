@@ -1,11 +1,11 @@
 #from cs50 import SQL
-from flask import Flask, render_template #request, session , flash, redirect,
+from flask import Flask, render_template, request, session , flash, redirect
 #from flask_session import Session
 #from tempfile import mkdtemp
 #from werkzeug.exceptions import default_exceptions
 #from werkzeug.security import check_password_hash, generate_password_hash
 
-#import pdb 
+#import pdb
 
 #from helpers import apology, login_required, lookup, usd
 
@@ -13,13 +13,13 @@ from flask import Flask, render_template #request, session , flash, redirect,
 app = Flask(__name__)
 
 # Ensure responses aren't cached
-#if app.config["3DEBUG"]:
-    #@app.after_request
-    #def after_request(response):
-        #response.headers["Cache-Control"] = "no-cache, no-store, must-revalidate"
-        #response.headers["Expires"] = 0
-        #response.headers["Pragma"] = "no-cache"
-        #return response
+if app.config["DEBUG"]:
+    @app.after_request
+    def after_request(response):
+        response.headers["Cache-Control"] = "no-cache, no-store, must-revalidate"
+        response.headers["Expires"] = 0
+        response.headers["Pragma"] = "no-cache"
+        return response
 
 # Custom filter
 #app.jinja_env.filters["usd"] = usd
@@ -71,11 +71,11 @@ if __name__ == '__main__':
 
 
 
-#def errorhandler(e):
-    #"""Handle error"""
-    #return render_template("apology.html")
+def errorhandler(e):
+    """Handle error"""
+    return render_template("apology.html")
 
 
 # listen for errors
-#for code in default_exceptions:
-    #app.errorhandler(code)(errorhandler)
+for code in default_exceptions:
+    app.errorhandler(code)(errorhandler)
