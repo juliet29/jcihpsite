@@ -77,6 +77,7 @@
   /*adjust footer*/
   .ju-footer {
     font-size: 100%;
+    width: 95vw;
   }
   .ju-content-block {
     position: relative;
@@ -85,8 +86,8 @@
   .ju-container {
     margin-bottom: 30px;
     margin-top: 2vh;
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-left: 5%;
+    padding-right: 5%;
   }
 }
 
@@ -116,13 +117,14 @@ section.ju-section_welcome-pg--hero {
 }
 
 .icon-svg {
+  display: none;
   position: absolute;
   top: 4vh;
   left: -16vh;
   transform: scaleX(0.4) scaleY(0.3);
 }
 
-.path {
+#path {
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
   animation: dash 5s forwards;
@@ -226,20 +228,23 @@ section.ju-section_welcome-pg--hero {
 
 .ju-section_welcome-pg--focus {
   padding: 0;
-  margin-top: 17vh;
+}
+
+.ju-section_welcome-pg--focus .row {
+  justify-content: space-between;
+}
+
+.ju-section_welcome-pg--focus .toprow {
+  margin-top: 10rem;
 }
 
 .ju-section_welcome-pg--focus .ju-headings {
-  margin-top: 9vh;
   position: relative;
-  top: 5vh;
 }
 
 .ju-section_welcome-pg--focus .ju-subheadings {
-  margin-top: 34vh;
-  left: 13vw;
   position: relative;
-  top: 12vh;
+  top: 15vh;
 }
 
 .ju-section_welcome-pg--focus .ju-paragraph {
@@ -247,24 +252,26 @@ section.ju-section_welcome-pg--hero {
 }
 
 .ju-section_welcome-pg--focus .ju-paragraph-and-link {
-  margin-left: 10vw;
   position: relative;
-  top: 13vh;
+  top: 20vh;
 }
 
 .ju-section_welcome-pg--focus .ju-image_right-side {
-  margin-left: 2.2vh;
   height: 36vh;
-  width: 64vh;
+  width: 60%;
+  position: relative;
 }
 
 .ju-section_welcome-pg--focus .ju-image-description {
-  font-size: 1.5vh;
-  margin-left: 29vw;
+  font-size: .4rem;
+  /* margin-left: 29vw; */
   padding-right: 0;
+  /* background-color: orange; */
+  width: fit-content;
+  margin-left: 43%;
 }
 
-@media (max-width: 425px) {
+@media (max-width: 768px) {
   .ju-section_welcome-pg--focus {
     margin-top: 5vh;
   }
@@ -330,10 +337,7 @@ section.ju-section_welcome-pg--hero {
 }
 
 .ju-subsection_welcome-pg--mandates {
-  margin-top: 20%;
-  margin-left: -10%;
   position: relative;
-  bottom: 9vh;
 }
 
 .ju-subsection_welcome-pg--mandates .ju-subheadings {
@@ -343,9 +347,8 @@ section.ju-section_welcome-pg--hero {
 .ju-infographic-welcome {
   float: right;
   position: relative;
-  bottom: 69vh;
+  bottom: 30rem;
   width: 55vw;
-  left: 12vw;
 }
 
 .ju-infographic-welcome ul {
@@ -393,16 +396,24 @@ section.ju-section_welcome-pg--hero {
     left: 0;
     position: initial;
     padding: 10px;
+    margin-top: 25px;
   }
+
   .ju-infographic-welcome ul {
     display: flex;
     flex-direction: column;
     padding: 0;
     text-align: center;
   }
+
   .ju-section_welcome-pg--mandates .ju-infographic_col {
     width: 100%;
   }
+
+  .ju-infographic_col {
+    width: initial;
+  }
+
 }
 
 /*philanthropy section*/
@@ -410,6 +421,9 @@ section.ju-section_welcome-pg--hero {
 .ju-section_welcome-pg--philanthropy .ju-headings {
   color: #EC9F05;
   margin-top: -5vh;
+  position: relative;
+  top: 12rem;
+  margin-left: 5vh;
 }
 
 .ju-section_welcome-pg--philanthropy .ju-headings_svgcolor {
@@ -419,11 +433,6 @@ section.ju-section_welcome-pg--hero {
 
 .ju-section_welcome-pg--philanthropy .ju-subheadings_period {
   color: #EC9F05;
-}
-
-.ju-section_welcome-pg--philanthropy .ju-headings {
-  margin-bottom: -9vh;
-  margin-left: 5vh;
 }
 
 .ju-subsection_welcome-pg--philanthropy {
@@ -465,9 +474,31 @@ section.ju-section_welcome-pg--hero {
   .ju-section_welcome-pg--philanthropy .ju-headings {
     margin-bottom: -105px;
     margin-left: -15px;
+    top: 0;
   }
 }
 
+/**Responsive Adjustments for Large Screens**/
+
+@media (min-width: 2559px) {
+  .container {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .ju-section_welcome-pg--focus {
+    margin-left: 15vw;
+  }
+  .ju-image_philanthropy {
+    margin-left: -15px;
+  }
+  .ju-subsection_welcome-pg--philanthropy {
+    margin-left: 15vw;
+    width: 60vw;
+  }
+  .ju-section_welcome-pg--focus .row {
+    width: 60vw;
+  }
+}
 
 
 

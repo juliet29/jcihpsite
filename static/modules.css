@@ -228,7 +228,6 @@ h1 {
 
 .footer-section {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
 }
 
@@ -238,9 +237,14 @@ h1 {
 }
 
 .footer-info {
-  left: 14vw;
   position: relative;
   font-weight: bolder;
+}
+
+.trademark {
+  height: fit-content;
+  position: relative;
+  width: fit-content;
 }
 
 /**Small devices (landscape phones, less than 768px)**/
@@ -257,6 +261,9 @@ h1 {
     text-align: center;
     margin-top: 10px;
     left: 0;
+  }
+  .footer-section {
+    justify-content: center;
   }
 }
 
@@ -316,16 +323,17 @@ h1 {
 
 .ju-hero_newIdea--top h1 {
   color: black;
-  font-size: 20vh;
+  font-size: 5rem;
   align-self: flex-end;
-  margin-bottom: -3vh;
+  margin-bottom: -.5rem;
   letter-spacing: -10px;
   transform: scaleY(1.3);
   /* position: relative; */
-  margin-left: -30%;
+  margin-left: 0;
+  margin-top: 12rem;
 }
 
-@media (max-width: 425px) {
+@media (max-width: 575px) {
   .ju-hero_newIdea--top h1 {
     font-size: 9vh;
     margin: auto;
@@ -342,7 +350,6 @@ h1 {
   }
 }
 
-}
 
 .ju-hero_newIdea--top h1, .ju-hero_newIdea--top .ju-icon {
   /*animation-name: slideinleft;
@@ -350,23 +357,32 @@ h1 {
 }
 
 .ju-hero_newIdea--bottom .ju-paragraph {
-  font-size: 3.5vh;
+  font-size: 1.8rem;
   text-align: right;
-  margin-top: 15vh;
+  margin-top: 14vh;
   font-style: italic;
   animation: slideinright 1.5s forwards;
 }
 
 .ju-icon {
-  height: 20vh;
-  transform: scaleX(1.2) scaleY(0.7);
-  margin-right: -10px;
-  position: relative;
-  top: -37px;
+  height: 4rem;
+  transform: scaleX(1.5) scaleY(0.7);
+  position: absolute;
+  left: 9vw;
+  margin-top: 9rem;
+  margin-left: 4rem;
+  top: 10%;
+  display: none;
 }
 
 .ju-highlight {
   background-color: white;
+}
+
+@media (min-width: 2559px) {
+  .ju-hero_newIdea--top h1 {
+    /*margin-left: -9.5rem;*/
+  }
 }
 
 /**hero down button**/
@@ -534,7 +550,7 @@ h1 {
   flex-direction: column;
   margin-bottom: 30px;
   height: max-content;
-  font-size: 5vh;
+  font-size: 3rem;
   color: #FF4E00
 }
 
@@ -565,7 +581,7 @@ h1 {
   flex-direction: column;
   margin-bottom: 30px;
   color: #000000;
-  font-size: 7vh;
+  font-size: 4rem;
 }
 
 .ju-subheadings>span {
@@ -583,7 +599,7 @@ h1 {
 /*paragraphs*/
 
 .ju-paragraph {
-  font-size: 2vh;
+  font-size: 1rem;
   color: #919191;
 }
 
